@@ -1,6 +1,6 @@
 # Image_Cartoonifer
 
-## Image processing Project : Transform images into its cartoon.
+### Image processing Project : Transform images into its cartoon.
 We will CARTOONIFY the images. Thus, we will build a python application that will
 transform an image into its cartoon using OpenCV.
 #### Workflow:
@@ -24,18 +24,17 @@ normal thresholding technique, so the threshold may vary for each image!
 that the picture which has a lot of dark areas always becomes nearly all black after
 transformation, so I thought of a brightness technique such as gamma correction.
 
--- So basically I turned an image into a cartoon version ( like mangas ), but the thing is,
+- - So basically I turned an image into a cartoon version ( like mangas ), but the thing is,
 whenever I try to cartoonize a picture I must change the parameters,
 ##### def Cartoonifier(path, gamma=0.8, thresh=100)
 So I thought why not use an auto-encoder and a data set of original+cartoonified images!
-1- Cartoonify a dataset of images manually and use diff parameters each time to get
+- Cartoonify a dataset of images manually and use diff parameters each time to get
 the wanted effect!
-2- I trained a neural network to learn the mapping between realistic and cartoon
-images. I used the previous dataset (with pairs of realistic and cartoon images for
-training). I used Convolutional Neural Networks (CNNs) for this task:
-Design an encoder-decoder architecture where the encoder learns to extract features
+- I trained an an encoder-decoder architecture where the encoder learns to extract features
 from the realistic image, and the decoder generates the cartoonized version based on
-these features.
+these features. I used the previous dataset (with pairs of realistic and cartoon images for
+training).
+
 ##### Future improvement?
 - Use a bigger dataset of images.
 - Fine-tune the model or adjust hyperparameters for better performance.
